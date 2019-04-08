@@ -70,7 +70,21 @@ const contact = document.getElementsByTagName('a')[5];
 contact.innerText = ('src', siteContent['nav']['nav-item-6']);
 contact.style.color = "green";
 
-//
+//append
+const newNav = document.createElement('a');
+const newNavText = document.createTextNode('Appended');
+newNav.appendChild(newNavText);
+contact.appendChild(newNav);
+newNav.style.marginLeft = "5px";
+newNav.style.color = "green";
+//append
+
+const preNav = document.createElement('a');
+const preNavText = document.createTextNode('Prepended');
+preNav.appendChild(preNavText);
+services.prepend(preNav);
+preNav.style.marginRight = "5px";
+preNav.style.color = "green";
 
 const headerOne = document.getElementsByTagName('h1')[0];
 headerOne.innerText = siteContent['cta']['h1'];
@@ -87,7 +101,7 @@ middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
 //
 
 const featuresHeader4 = document.getElementsByTagName('h4')[0];
-featuresHeaderFour.innerText = siteContent['main-content']['features-h4'];
+featuresHeader4.innerText = siteContent['main-content']['features-h4'];
 
 const featuresContent = document.getElementsByTagName('p')[0];
 featuresContent.innerText = siteContent['main-content']['features-content'];
@@ -99,7 +113,7 @@ const aboutContent1 = document.getElementsByTagName('p')[1];
 aboutContent1.innerText = siteContent['main-content']['about-content'];
 
 const servicesHeader4 = document.getElementsByTagName('h4')[2];
-services_H4.innerText = siteContent['main-content']['services-h4'];
+servicesHeader4.innerText = siteContent['main-content']['services-h4'];
 
 const servicesContent = document.getElementsByTagName('p')[2];
 servicesContent.innerText = siteContent['main-content']['services-content'];
